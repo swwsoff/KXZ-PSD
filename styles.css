@@ -1,0 +1,214 @@
+/* Réinitialisation de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #2c0d60; /* Violet foncé, fond du site */
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+/* Container centralisé */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Header */
+header {
+  background-color: #2c0d60; /* Violet foncé */
+  color: white;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Nouveau style pour centrer le texte KXZ PSD */
+header .title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 1001; /* Assurez-vous que ce texte soit au-dessus du logo et de la navigation */
+}
+
+header .title h1 {
+  font-size: 2.5rem; /* Ajustez la taille de la police selon vos préférences */
+  color: #FF4C5B; /* Rouge vif pour correspondre à votre thème */
+  font-weight: bold;
+  margin: 10px 0; /* Espacement autour du texte */
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 10px; /* Ajuste la position verticale */
+}
+
+header .logo img {
+  width: 120px; /* Taille du logo */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+header .logo img:hover {
+  transform: scale(1.1); /* Légère animation au survol du logo */
+}
+
+/* Logo texte alternative (si jamais vous voulez un texte à la place de l'image du logo) */
+header .logo h1 {
+  font-size: 2rem;
+  color: #FF4C5B; /* Rouge vif pour le logo texte */
+  font-weight: 600;
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end; /* Aligner à droite */
+}
+
+nav ul li {
+  margin-left: 30px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #FF4C5B; /* Rouge vif au survol */
+}
+
+/* Hero Section */
+.hero {
+  background: url('images/hero-bg.jpg') center/cover no-repeat;
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+  margin-top: 80px; /* Décale vers le bas pour éviter le header */
+}
+
+.hero h2 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Section des Packs */
+.pack-section {
+  padding: 60px 0;
+  background-color: #2c0d60; /* Fond violet foncé */
+}
+
+.pack-section h3 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #FF4C5B; /* Rouge vif pour le titre */
+}
+
+.pack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.pack-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background-color: #333; /* Gris foncé pour les cartes */
+}
+
+.pack-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pack-card:hover {
+  transform: scale(1.05);
+}
+
+.pack-card .pack-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.pack-card:hover .pack-details {
+  opacity: 1;
+}
+
+.pack-details h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.pack-details p {
+  font-size: 1rem;
+}
+
+.download-btn {
+  padding: 10px 20px;
+  background-color: #FF4C5B; /* Rouge vif pour le bouton */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #e13c46; /* Une teinte plus foncée du rouge */
+}
+
+/* Footer */
+footer {
+  background-color: #2c0d60; /* Violet foncé */
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  margin-top: 60px;
+}
+
+footer p {
+  font-size: 1rem;
+}
